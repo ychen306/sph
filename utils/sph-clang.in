@@ -11,6 +11,6 @@ else
   exit 1
 fi
 
-LIBRARY_PATH=@CMAKE_BINARY_DIR@/lib/libSPH.so
+LIBRARY_PATH=@CMAKE_BINARY_DIR@/libSPH.so
 
 exec $clang -fpass-plugin=$LIBRARY_PATH -Xclang -load -Xclang $LIBRARY_PATH $@

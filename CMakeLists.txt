@@ -33,10 +33,10 @@ configure_file(${CMAKE_SOURCE_DIR}/test/lit.site.cfg.in
                ${CMAKE_BINARY_DIR}/test/lit.site.cfg)
 
 configure_file(${CMAKE_SOURCE_DIR}/utils/sph-clang.in
-               ${CMAKE_BINARY_DIR}/pssa-clang)
+               ${CMAKE_BINARY_DIR}/sph-clang)
 
 configure_file(${CMAKE_SOURCE_DIR}/utils/sph-clang.in
-               ${CMAKE_BINARY_DIR}/pssa-clang++)
+               ${CMAKE_BINARY_DIR}/sph-clang++)
 
 configure_file(${CMAKE_SOURCE_DIR}/utils/sph-opt.in
-               ${CMAKE_BINARY_DIR}/pssa-opt)
+               ${CMAKE_BINARY_DIR}/sph-opt)
