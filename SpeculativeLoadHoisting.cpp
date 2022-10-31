@@ -53,7 +53,9 @@ static bool requiresReload(MemoryLocation Loc, Loop *L, AliasAnalysis &AA) {
     for (auto &I : *BB) {
       if (auto *SI = dyn_cast<StoreInst>(&I)) {
         auto StoreLoc = MemoryLocation::get(SI);
-        if (AA.alias(Loc, StoreLoc) && Loc.Size != StoreLoc.Size)
+        if (AA.alias(Loc, StoreLoc) && 
+            (Loc.Size != StoreLoc.Size ||
+             SI->getValueOperand()->getType()->isVectorTy()))
           return true;
         // Can forward the store value without reload
         continue;
