@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec opt -load-pass-plugin @CMAKE_BINARY_DIR@/lib/libSPH.so $@
